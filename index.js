@@ -5,6 +5,7 @@ import jwt from 'jsonwebtoken';
 import connectDB from './config/db.js';
 import 'dotenv/config';
 import Usuario from './models/usuario.js';
+import cors from 'cors';
 
 const { SECRET } = process.env;
 
@@ -12,6 +13,15 @@ const { PORT } = process.env;
 
 //Conectar a la BBDD
 connectDB();
+
+const corsOptions = {
+    origin: [
+        'https://crm-clientes-4dsu.vercel.app',
+        'https://crm-clientes-rosy.vercel.app',
+    ],
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Authorization', 'Content-Type'],
+};
 
 //Servidor
 const server = new ApolloServer({
@@ -36,6 +46,7 @@ const server = new ApolloServer({
             }
         }
     },
+    cors: corsOptions,
 });
 //Arrancar el servidor
 server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
