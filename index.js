@@ -13,14 +13,9 @@ const { PORT } = process.env;
 
 //Conectar a la BBDD
 connectDB();
-
 const corsOptions = {
-    origin: [
-        'https://crm-clientes-4dsu.vercel.app',
-        'https://crm-clientes-rosy.vercel.app',
-    ],
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Authorization', 'Content-Type'],
+    origin: '*', // Permitir solicitudes desde cualquier dominio
+    credentials: true, // Permitir el envío de cookies en las solicitudes
 };
 
 //Servidor
