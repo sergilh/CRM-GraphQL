@@ -36,6 +36,10 @@ const server = new ApolloServer({
             }
         }
     },
+    cors: {
+        origin: 'https://crm-clientes-rosy.vercel.app', // frontend en Vercel
+        credentials: true,
+    },
 });
 //Arrancar el servidor
 server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
