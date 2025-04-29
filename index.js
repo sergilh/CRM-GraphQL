@@ -17,6 +17,10 @@ connectDB();
 const server = new ApolloServer({
     typeDefs,
     resolvers,
+    cors: {
+        origin: '*',
+        credentials: true,
+    },
     context: ({ req }) => {
         console.log(req.headers);
 
@@ -35,10 +39,6 @@ const server = new ApolloServer({
                 console.log(error);
             }
         }
-    },
-    cors: {
-        origin: 'http://localhost:3000',
-        credentials: true,
     },
 });
 //Arrancar el servidor
