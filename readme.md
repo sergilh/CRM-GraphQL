@@ -20,9 +20,39 @@ Este es un sistema CRM (Customer Relationship Management) desarrollado como proy
 
 ## 📦 Instalación
 
-Clona ambos repositorios (backend y frontend):
+-Clona ambos repositorios (backend y frontend):
 
 ```bash
-git clone https://github.com/tuusuario/crm-clientes-frontend.git
-git clone https://github.com/tuusuario/crm-clientes-backend.git
+git clone https://github.com/sergilh/CRM-GraphQL.git
+git clone https://github.com/sergilh/CRMClientes.git
 ```
+
+-Instala las dependencias:
+
+npm install
+
+-Crea un archivo .env en la raíz del proyecto con las siguientes variables:
+
+MONGO_DB=
+SECRET=
+PORT=4000
+
+-Inicia el servidor de desarrollo
+
+npm run dev
+
+## 🌳 Estructura del Backend
+
+CRM-Clientes-Backend/
+├── config/
+│ └── db.js
+├── db/
+│ ├── resolvers.js
+│ └── schema.js
+├── models/
+│ ├── cliente.js
+│ ├── pedido.js
+│ └── producto.js
+├── .env
+├── index.js
+└── package.json
