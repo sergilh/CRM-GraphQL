@@ -41,7 +41,7 @@ const server = new ApolloServer({
         origin: [
             'https://crm-clientes-rosy.vercel.app',
             'https://crm-clientes-4dsu-3voawmz1c-sergi-lopez-hernandezs-projects.vercel.app',
-            '*',
+            ,
         ],
         credentials: true,
     },
