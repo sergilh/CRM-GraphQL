@@ -5,7 +5,6 @@ import jwt from 'jsonwebtoken';
 import connectDB from './config/db.js';
 import 'dotenv/config';
 import Usuario from './models/usuario.js';
-import cors from 'cors';
 
 const { SECRET } = process.env;
 
@@ -41,7 +40,6 @@ const server = new ApolloServer({
         origin: [
             'https://crm-clientes-rosy.vercel.app',
             'https://crm-clientes-4dsu-3voawmz1c-sergi-lopez-hernandezs-projects.vercel.app',
-            ,
         ],
         credentials: true,
     },
