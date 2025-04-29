@@ -13,10 +13,6 @@ const { PORT } = process.env;
 
 //Conectar a la BBDD
 connectDB();
-const corsOptions = {
-    origin: '*', // Permitir solicitudes desde cualquier dominio
-    credentials: true, // Permitir el envío de cookies en las solicitudes
-};
 
 //Servidor
 const server = new ApolloServer({
@@ -41,7 +37,14 @@ const server = new ApolloServer({
             }
         }
     },
-    cors: corsOptions,
+    ors: {
+        origin: [
+            'https://crm-clientes-rosy.vercel.app',
+            'https://crm-clientes-4dsu-3voawmz1c-sergi-lopez-hernandezs-projects.vercel.app',
+            '*',
+        ],
+        credentials: true,
+    },
 });
 //Arrancar el servidor
 server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
