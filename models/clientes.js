@@ -36,6 +36,7 @@ const clientesSchema = mongoose.Schema({
         ref: 'Usuario',
     },
 });
+
 // Crear el modelo basado en el esquema
 const Cliente = mongoose.model('Cliente', clientesSchema);
 
