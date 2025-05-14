@@ -1,6 +1,6 @@
 # CRM de Clientes
 
-Este es un sistema CRM (Customer Relationship Management) desarrollado como proyecto fullstack. Permite gestionar clientes, productos, pedidos y usuarios, con autenticación y control de acceso.
+Este proyecto se trata de un sistema CRM (Customer Relationship Management) desarrollado como proyecto fullstack. Permite gestionar clientes, productos, pedidos y usuarios, con autenticación y control de acceso.
 
 ## 🛠 Tecnologías utilizadas
 
@@ -35,7 +35,7 @@ npm install
 
 MONGO_DB=
 SECRET=
-PORT=4000
+PORT=
 
 -Inicia el servidor de desarrollo
 
@@ -56,3 +56,35 @@ CRM-Clientes-Backend/
 ├── .env
 ├── index.js
 └── package.json
+
+## 📸 Capturas de pantalla
+
+### Login
+
+![Login](/public/15.PNG)
+
+### Inicio (Página principal)
+
+![Inicio (Página principal)](/public/16.PNG)
+
+### Edición de cliente/producto
+
+![Edición de cliente/producto](/public/17.PNG)
+![Edición de cliente/producto](/public/18.PNG)
+
+### Sección de Pedidos
+
+![Sección de Pedidos](/public/19.PNG)
+
+### Sección de Productos
+
+![Sección de Productos](/public/20.PNG)
+
+### Gráficas Mejores Clientes/Vendedores
+
+![Gráficas Mejores Vendedores](/public/21.PNG)
+![Gráficas Mejores Clientes](/public/22.PNG)
+
+### Registro
+
+![Registro](/public/23.PNG)
